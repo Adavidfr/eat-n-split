@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Split Bill App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains a React application that helps users split bills with their friends. The app allows users to manage their friends, track balances, and handle the division of a bill between them and their selected friend.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Friend Management**: Users can add new friends to the app by providing a name and image URL.
+- **Bill Splitting**: The app allows users to split a bill with a selected friend. Users can input the total bill value, how much they paid, and the app will calculate the balance.
+- **Balance Tracking**: After splitting the bill, the app keeps track of how much each person owes or is owed. It displays a message indicating the current balance between the user and their friend.
+- **Interactive UI**: The app provides an interactive interface to select friends, add new ones, and manage bill payments.
 
-### `npm start`
+## Components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. **App**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The main component that holds the state of the friends list, the selected friend, and whether to show the "Add Friend" form.
 
-### `npm test`
+### 2. **FriendsList**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Displays the list of friends with their current balance and allows users to select a friend for bill splitting.
 
-### `npm run build`
+### 3. **Friend**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Represents an individual friend with a profile image, name, and the balance with the user. The user can select or deselect a friend here.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 4. **FormAddFriend**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+A form where users can add new friends by providing their name and image URL.
 
-### `npm run eject`
+### 5. **FormSplitBill**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The form used for splitting a bill with the selected friend. Users can input the total bill value, their expense, and indicate who is paying the bill.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 6. **Button**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+A reusable button component used throughout the app.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## How It Works
 
-## Learn More
+1. **Adding a Friend**: Users can add friends by clicking the "Add friend" button and filling out the form with the friend's name and image URL.
+2. **Selecting a Friend**: After adding a friend, users can select them to split a bill. The selected friend's balance will be updated based on the bill payment.
+3. **Splitting a Bill**: When a friend is selected, users can input the total bill value, how much they have paid, and the app will automatically calculate the amount the friend needs to pay or is owed.
+4. **Balance Update**: After the bill is split, the app updates the balances for both the user and the friend. It displays whether the user owes money, the friend owes money, or if they are even.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone the repository to your local machine:
+   ```bash
+   git clone https://github.com/yourusername/split-bill-app.git
+   ```
